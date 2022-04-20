@@ -50,4 +50,25 @@ describe('sayHello', function(){
     })
 })
 
+// nameInArray
+describe('nameInArray', function() {
+    it('should be a defined function', function () {
+        expect(typeof nameInArray).toBe('function');
+    });
+    it('should return false for no input, should return an array if there is an input', function () {
+        expect(Array.isArray(nameInArray())).toBe(false);
+    });
+    it('should return ["h"]', function () {
+        expect(nameInArray('h')).toEqual(jasmine.arrayContaining(['h']));
+    });
+    it('should return ["H","e","l","l","o"]', function () {
+        expect(nameInArray('Hello')).toEqual(jasmine.arrayContaining(["H","e","l","l","o"]))
+    });
+    it('should not return undefined', function () {
+        expect(nameInArray()).not.toBe(undefined)
+    })
+    it('should have an input of string', function() {
+        expect(nameInArray()).toBe(false);
+    })
 
+})

@@ -14,4 +14,17 @@ function sayHello(name) {
     return ("Hello, " + name + "!");
 }
 
+function nameInArray(str){
+     if(typeof str === 'string'){
+         return str.split("");
+     }
+     return false;
+}
+
+
+console.log(nameInArray(123))
+
+
+
+
 
