@@ -33,7 +33,21 @@ describe('sayHello', function(){
     it('should be a defined function', function(){
         expect(typeof sayHello).toBe('function');
     });
-
+    it('should be a string', function(){
+        expect(typeof sayHello()).toBe('string');
+    });
+    it('should return "Hello, Jane!"', function () {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    });
+    it('should return "Hello, Alex!"', function () {
+        expect(sayHello('Alex')).toBe('Hello, Alex!');
+    });
+    it('should return "Hello, Pat!"', function(){
+        expect(sayHello("Pat")).toBe('Hello, Pat!');
+    })
+    it('should not return undefined', function () {
+        expect(sayHello()).not.toBe(undefined);
+    })
 })
 
-// Exercise 0
+

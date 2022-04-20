@@ -10,6 +10,8 @@ function plusOne(x){
     return 0;
 }
 
-function sayHello(){
-
+function sayHello(name) {
+    return ("Hello, " + name + "!");
 }
+
+
