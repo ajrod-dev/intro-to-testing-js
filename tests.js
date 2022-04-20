@@ -13,3 +13,27 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+// plusOne() test
+
+describe('plusOne', function () {
+    it('should be a defined function', function () {
+        expect(typeof plusOne).toBe('function');
+    });
+    it('should return a number', function() {
+        expect(typeof plusOne()).toBe('number');
+    });
+    it('should return 5 when passed 4', function () {
+        expect(plusOne(4)).toBe(5);
+    });
+})
+
+// sayHello
+describe('sayHello', function(){
+    it('should be a defined function', function(){
+        expect(typeof sayHello).toBe('function');
+    });
+
+})
+
+// Exercise 0
